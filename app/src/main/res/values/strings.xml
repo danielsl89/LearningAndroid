@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">RecycleGrid</string>
+    <string name="toolbar_title">Items List</string>
+    <string name="added_to_favorites">This is one of your favorites, I will remember!</string>
+    <string name="bottom_sheet_title">The bottom content!</string>
+    <string name="bottom_sheet_content">Empty, for now!</string>
 </resources>

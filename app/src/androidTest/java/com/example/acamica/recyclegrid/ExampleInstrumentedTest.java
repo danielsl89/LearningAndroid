@@ -1,4 +1,4 @@
-package com.example.gladyspc.recyclegrid;
+package com.example.acamica.recyclegrid;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
