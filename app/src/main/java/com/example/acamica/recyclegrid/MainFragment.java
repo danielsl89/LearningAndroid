@@ -11,7 +11,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.example.acamica.recyclegrid.adapter.RecyclerViewAdapter;
+import com.example.acamica.recyclegrid.adapters.RecyclerViewAdapter;
 
 
 /**
