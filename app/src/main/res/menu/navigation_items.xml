@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+        <item android:title="@string/navigation_title">
+            <menu>
+                <group android:checkableBehavior="single">
+                    <item
+                        android:id="@+id/navigation_item_1"
+                        android:icon="@drawable/ic_border_all_white_24dp"
+                        android:title="@string/navigation_item_1" />
+                    <item
+                        android:id="@+id/navigation_item_2"
+                        android:icon="@drawable/ic_format_indent_decrease_white_24dp"
+                        android:title="@string/navigation_item_2" />
+                    <item
+                        android:id="@+id/navigation_item_3"
+                        android:icon="@drawable/ic_search_white_24dp"
+                        android:title="@string/navigation_item_3" />
+                </group>
+            </menu>
+        </item>
+</menu>

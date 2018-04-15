@@ -4,4 +4,10 @@
     <string name="added_to_favorites">This is one of your favorites, I will remember!</string>
     <string name="bottom_sheet_title">The bottom content!</string>
     <string name="bottom_sheet_content">Empty, for now!</string>
-</resources>
+    <string name="open_navigation_drawer">Open navigation drawer</string>
+    <string name="close_navigation_drawer">Close navigation drawer</string>
+    <string name="navigation_title">Acamica</string>
+    <string name="navigation_item_1">Exercise 1</string>
+    <string name="navigation_item_2">Exercise 2</string>
+    <string name="navigation_item_3">Exercise 3</string>
+    </resources>
