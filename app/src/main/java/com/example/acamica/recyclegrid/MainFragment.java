@@ -41,25 +41,15 @@ public class MainFragment extends Fragment {
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         RecyclerView recyclerView = view.findViewById(R.id.recycler_view);
-        if(recyclerView != null){
-            recyclerView.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    listener.onItemSelected(view.getId());
-                }
-            });
-        }
-    }
-
-    @Override
-    public void onActivityCreated(@Nullable Bundle savedInstanceState) {
-        super.onActivityCreated(savedInstanceState);
-
-        RecyclerView recyclerView = getActivity().findViewById(R.id.recycler_view);
-        if(recyclerView != null){
-            recyclerView.setAdapter(new RecyclerViewAdapter());
-            recyclerView.setLayoutManager(new GridLayoutManager(getContext(), 2));
-        }
+        recyclerView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //TODO: This onClick function is not being triggered. Something is consuming the input?
+                listener.onItemSelected(view.getId());
+            }
+        });
+        recyclerView.setAdapter(new RecyclerViewAdapter());
+        recyclerView.setLayoutManager(new GridLayoutManager(getContext(), 2));
     }
 
     @Override

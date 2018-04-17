@@ -37,32 +37,24 @@ public class MainActivity extends AppCompatActivity implements MainFragment.OnIt
         }
 
         CollapsingToolbarLayout collapsingToolbarLayout = findViewById(R.id.collapsing_toolbar_layout);
-
-        if (collapsingToolbarLayout != null){
-            collapsingToolbarLayout.setTitle(getBaseContext().getString(R.string.toolbar_title));
-        }
+        collapsingToolbarLayout.setTitle(getBaseContext().getString(R.string.toolbar_title));
 
         FloatingActionButton floatingActionButton = findViewById(R.id.floating_action_button);
-        if(floatingActionButton != null){
-            floatingActionButton.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    Log.d("MainActivity", "Selected favorite");
-                    Snackbar.make(view, getBaseContext().getString(R.string.added_to_favorites), Snackbar.LENGTH_SHORT).setAction("Action", null).show();
-                }
-            });
-        }
+        floatingActionButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Log.d("MainActivity", "Selected favorite");
+                Snackbar.make(view, getBaseContext().getString(R.string.added_to_favorites), Snackbar.LENGTH_SHORT).setAction("Action", null).show();
+            }
+        });
 
         drawerLayout = findViewById(R.id.drawer_layout);
-        if(drawerLayout != null){
-            ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawerLayout, toolbar, R.string.open_navigation_drawer, R.string.close_navigation_drawer);
-            drawerLayout.addDrawerListener(toggle);
-            toggle.syncState();
-        }
+        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawerLayout, toolbar, R.string.open_navigation_drawer, R.string.close_navigation_drawer);
+        drawerLayout.addDrawerListener(toggle);
+        toggle.syncState();
+
         NavigationView navigationView = findViewById(R.id.navigation_view);
-        if(navigationView != null){
-            navigationView.setNavigationItemSelectedListener(this);
-        }
+        navigationView.setNavigationItemSelectedListener(this);
 
         FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
         transaction.add(R.id.fragment_holder, new MainFragment(), FIRST_FRAGMENT_TAG);

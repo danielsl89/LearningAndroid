@@ -53,8 +53,7 @@ public class PageFragment extends Fragment {
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        //TODO: This function is not setting the text in all the cases. Buggy when reusing the fragment (Check fragment life cycle)
-        TextView textView = getView().findViewById(R.id.fragment_page_text);
+        TextView textView = view.findViewById(R.id.fragment_page_text);
         textView.setText("Page " + pageNumber);
     }
 }

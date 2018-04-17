@@ -10,6 +10,7 @@ import com.example.acamica.recyclegrid.PageFragment;
 public class PagerAdapter extends FragmentPagerAdapter {
 
     public static final int PAGE_COUNT = 4;
+    private String tabTitles[] = new String[]{"Tab 1", "Tab 2", "Tab 3", "Tab 4"};
     private Context context;
 
     public PagerAdapter(FragmentManager fragmentManager, Context context){
@@ -25,5 +26,10 @@ public class PagerAdapter extends FragmentPagerAdapter {
     @Override
     public int getCount() {
         return PAGE_COUNT;
+    }
+
+    @Override
+    public CharSequence getPageTitle(int position) {
+        return tabTitles[position];
     }
 }

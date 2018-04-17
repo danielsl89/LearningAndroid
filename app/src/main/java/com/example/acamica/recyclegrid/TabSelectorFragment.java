@@ -3,6 +3,7 @@ package com.example.acamica.recyclegrid;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
 import android.view.LayoutInflater;
@@ -34,7 +35,12 @@ public class TabSelectorFragment extends Fragment {
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
         ViewPager viewPager = getActivity().findViewById(R.id.view_pager);
+        TabLayout tabLayout = getActivity().findViewById(R.id.tab_layout);
+
         viewPager.setAdapter(new PagerAdapter(getActivity().getSupportFragmentManager(), getActivity()));
+        viewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
+
+        tabLayout.setupWithViewPager(viewPager);
     }
 
 }
